@@ -589,6 +589,8 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 
 				// Last step: publish corresponding event.
 				finishRefresh();
+
+				System.out.println("success");
 			}
 
 			catch (BeansException ex) {

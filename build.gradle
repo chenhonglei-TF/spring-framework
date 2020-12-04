@@ -289,8 +289,12 @@ configure(allprojects) { project ->
 			cacheChangingModulesFor 0, "seconds"
 		}
 		repositories {
+			//阿里云镜像
+			maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
+			maven { url 'https://maven.aliyun.com/nexus/content/repositories/jcenter' }
 			mavenCentral()
 			maven { url "https://repo.spring.io/libs-spring-framework-build" }
+			maven { url "https://repo.spring.io/plugins-release" }
 		}
 	}
 	configurations.all {
@@ -417,9 +421,9 @@ configure(rootProject) {
 	publishing {
 		publications {
 			mavenJava(MavenPublication) {
-				artifact docsZip
-				artifact schemaZip
-				artifact distZip
+//				artifact docsZip
+//				artifact schemaZip
+//				artifact distZip
 			}
 		}
 	}
